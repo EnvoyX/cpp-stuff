@@ -28,6 +28,30 @@ class Mahasiswa{
 };
 
 
+class Car{
+    public:
+        std::string make;
+        std::string model;
+        int year;
+        std::string color;
+
+        void accelerate(){
+            std::cout << "You step on the gas!\n";
+        }
+        
+        void brake(){
+            std::cout << "You step on the brakes!\n";
+        }
+    Car(std::string make, std::string model, int year, std::string color){
+        this->make = make;
+        this->model = model;
+        this->year = year;
+        this->color = color;
+    }
+};
+
+
+
 
 int main(){
 
@@ -43,9 +67,22 @@ int main(){
 
     Mahasiswa mahasiswa1("Momo Ayase", 18, 3.9);
 
-     std::cout << mahasiswa1.name << "\n";
+    std::cout << mahasiswa1.name << "\n";
     std::cout << mahasiswa1.age << "\n";
     std::cout << mahasiswa1.gpa<< "\n";
+
+    Car car1("Chevy", "Corvette", 2022, "blue");
+    Car car2("Ford", "Mustang", 2023, "red");
+
+    std::cout << car1.make << '\n';
+    std::cout << car1.model << '\n';
+    std::cout << car1.year << '\n';
+    std::cout << car1.color << '\n';
+
+    std::cout << car2.make << '\n';
+    std::cout << car2.model << '\n';
+    std::cout << car2.year << '\n';
+    std::cout << car2.color << '\n';
 
     return 0;
 }
